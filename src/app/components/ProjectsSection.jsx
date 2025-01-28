@@ -45,7 +45,7 @@ const projectsData = [
     title: "snjdsnh",
     description: "Project 5 decription",
     image: "/images/projects/5.png",
-    tag: ["All", "Web"],
+    tag: ["All", "Mobile"],
     gitUrl: "/",
     previewUrl: "/",
   },
