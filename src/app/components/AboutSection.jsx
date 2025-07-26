@@ -8,41 +8,90 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>postgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
-      </ul>
+      <div className="space-y-4">
+        <div>
+          <h4 className="font-semibold text-blue-400 mb-1">Frontend</h4>
+          <ul className="flex flex-wrap gap-2 text-sm text-gray-200">
+            <li className="bg-gray-800 px-3 py-1 rounded-full">React</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">Next.js</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">vite</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">HTML5</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">CSS3</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">Tailwind CSS</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">JavaScript</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-semibold text-purple-400 mb-1">Backend</h4>
+          <ul className="flex flex-wrap gap-2 text-sm text-gray-200">
+            <li className="bg-gray-800 px-3 py-1 rounded-full">Node.js</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">Expressjs</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">PostgreSQL</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">Sql</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">Spring Boot</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">Firebase</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-semibold text-pink-400 mb-1">Tools & Other</h4>
+          <ul className="flex flex-wrap gap-2 text-sm text-gray-200">
+            <li className="bg-gray-800 px-3 py-1 rounded-full">Git</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">GitHub</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">VsCode</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">Intellij</li>
+            <li className="bg-gray-800 px-3 py-1 rounded-full">Clerk</li>
+
+          </ul>
+        </div>
+      </div>
     ),
   },
   {
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
-        <li>school</li>
-        <li>St Andrews insititute of technology and management, Gurugram</li>
-      </ul>
+      <div className="space-y-2">
+        <div className="border-l-4 border-blue-500 pl-4 mb-2">
+          <h4 className="font-semibold text-white">B.Tech in Computer Science</h4>
+          <p className="text-blue-300 text-sm">St Andrews Institute of Technology and Management, Gurugram</p>
+          <p className="text-gray-400 text-xs">2022 - 2025</p>
+        </div>
+        <div className="border-l-4 border-purple-500 pl-4">
+          <h4 className="font-semibold text-white">Diploma in Electronic and Communication Engineering</h4>
+          <p className="text-purple-300 text-sm">Guru Nanak Dev institute of technology</p>
+          <p className="text-gray-400 text-xs">2019 - 2022</p>
+        </div>
+      </div>
     ),
   },
   {
     title: "Certification",
     id: "certification",
     content: (
-      <ul>
-        <li>javascript certificate by sclear</li>
-        <li></li>
-      </ul>
+      <div className="space-y-2">
+        <div className="border-l-4 border-green-500 pl-4 mb-2">
+          <h4 className="font-semibold text-white">JavaScript Certificate</h4>
+          <p className="text-green-300 text-sm">Scaler Academy</p>
+          <p className="text-gray-400 text-xs">Issued 2023</p>
+        </div>
+        <div className="border-l-4 border-pink-500 pl-4">
+          <h4 className="font-semibold text-white">Deloitte Australia - Technology  Job Simulation</h4>
+          <p className="text-pink-300 text-sm">forage</p>
+          <p className="text-gray-400 text-xs">Issued 2025</p>
+        </div>
+        <div className="border-l-4 border-pink-500 pl-4">
+          <h4 className="font-semibold text-white">AWS APAC - Solutions Architecture Job Simulation</h4>
+          <p className="text-pink-300 text-sm">forage</p>
+          <p className="text-gray-400 text-xs">Issued 2025</p>
+        </div>
+      </div>
     ),
   },
 ];
 
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
-  const [ispending, startTransition] = useTransition();
+  const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -51,43 +100,63 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about.png" width={500} height={500} />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I am a web developer with a passion for creating interactive and
-            responsive web applications. I have experience working with
-            JavaScript, React, HTML, CSS. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+    <section id="about" className="py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Me</span>
+          </h2>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            Hi! I'm Umesh, a passionate full-stack developer who loves building interactive, user-focused web applications. I thrive 
+            on solving real-world problems with clean code and modern technologies. Always eager to learn, collaborate, and create digital 
+            experiences that make a difference.
           </p>
-          <div className="flex flex-row justify-start mt-8 ">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              Education{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certification")}
-              active={tab === "certification"}
-            >
-              {" "}
-              Certification{" "}
-            </TabButton>
+        </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500" />
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
+              <Image
+                src="/images/about.png"
+                width={500}
+                height={500}
+                alt="About Umesh"
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 blur-xl" />
           </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
+          <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+            <h2 className="text-3xl font-bold text-white mb-4">Who am I?</h2>
+            <p className="text-base lg:text-lg mb-4">
+              I specialize in building scalable, maintainable, and beautiful web applications. My journey in tech is driven by curiosity and a
+               desire to make a positive impact through technology. I believe in continuous learning and enjoy working in collaborative 
+               environments.
+            </p>
+            <div className="flex flex-row flex-wrap gap-2 mt-4">
+              <TabButton
+                selectTab={() => handleTabChange("skills")}
+                active={tab === "skills"}
+              >
+                Skills
+              </TabButton>
+              <TabButton
+                selectTab={() => handleTabChange("education")}
+                active={tab === "education"}
+              >
+                Education
+              </TabButton>
+              <TabButton
+                selectTab={() => handleTabChange("certification")}
+                active={tab === "certification"}
+              >
+                Certification
+              </TabButton>
+            </div>
+            <div className="mt-8 min-h-[120px]">
+              {TAB_DATA.find((t) => t.id === tab).content}
+            </div>
           </div>
         </div>
       </div>

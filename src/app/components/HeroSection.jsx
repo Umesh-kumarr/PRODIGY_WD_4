@@ -10,78 +10,118 @@ import Link from "next/link";
 
 const HeroSection = () => {
     return (
-        <section>
-            <div className="grid grid-cols-1 sm:grid-cols-12">
+        <section className="min-h-[80vh] flex items-center justify-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="col-span-7 place-self-center text-center sm:text-left"
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="col-span-7 place-self-center text-center lg:text-left"
                 >
-                    <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-600">
-                            Hello, I&apos;m{" "}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="mb-6"
+                    >
+                        <span className="text-blue-400 font-medium text-lg">Welcome to my portfolio</span>
+                    </motion.div>
+                    <h1 className="text-white mb-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+                            Hi, I'm{" "}
                         </span>
-                        <br></br>
+                        <br />
                         <TypeAnimation
                             sequence={[
-                                // Same substring at the start will only be typed out once, initially
-                                'Umesh',
-                                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                                'web Developer',
-                                1000,
-                                'Software Developer',
-                                1000,
-                                'UI/UX Designer',
-                                1000
+                                "Umesh",
+                                2000,
+                                "a Full Stack Developer",
+                                2000,
+                                "a UI/UX Designer",
+                                2000,
+                                "a Problem Solver",
+                                2000,
                             ]}
                             wrapper="span"
                             speed={50}
+                            className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500"
                             repeat={Infinity}
                         />
                     </h1>
-                    <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, tenetur.
-                    </p>
-                    <div>
-
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        className="text-gray-300 text-lg sm:text-xl lg:text-2xl mb-8 max-w-2xl"
+                    >
+                        I craft exceptional digital experiences with modern technologies. Passionate about creating innovative solutions that make a difference.
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                        className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                    >
                         <Link
-                            href="/#contact"
-                            className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 hover:bg-slate-200 text-white">
-                            Hire Me
-                        </Link>
-
-                        <Link
-                            href="/"
-                            className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 hover:bg-slate-800 text-white mt-3 "
+                            href="#contact"
+                            className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                         >
-                            <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                                Download CV
-                            </span>
+                            Get In Touch
                         </Link>
-
-                    </div>
+                        <Link
+                            href="#projects"
+                            className="px-8 py-4 rounded-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                        >
+                            View My Work
+                        </Link>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 0.8 }}
+                        className="mt-8 flex items-center justify-center lg:justify-start gap-6"
+                    >
+                        <div className="flex items-center gap-2">
+                            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                            <span className="text-gray-400">Available for opportunities</span>
+                        </div>
+                    </motion.div>
                 </motion.div>
-
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="col-spam-5 place-self-center sm:place-self-auto lg:place-self-auto  mt-4 lg:mt-0 lg:ml-[100px]">
-                    <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-                        <Image
-                            src="/images/heroimage.png"
-                            alt="hero image"
-                            className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                            width={300}
-                            height={300}
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="col-span-5 place-self-center"
+                >
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl" />
+                        <div className="relative rounded-full bg-gradient-to-br from-gray-800 to-gray-900 p-2 shadow-2xl">
+                            <div className="rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-4">
+                                <Image
+                                    src="/images/heroimage.png"
+                                    alt="Umesh - Full Stack Developer Hero Image"
+                                    className="rounded-full object-cover"
+                                    width={400}
+                                    height={400}
+                                    priority
+                                />
+                            </div>
+                        </div>
+                        <motion.div
+                            animate={{ rotate: 360, scale: [1, 1.1, 1] }}
+                            transition={{ rotate: { duration: 20, repeat: Infinity, ease: "linear" }, scale: { duration: 2, repeat: Infinity, ease: "easeInOut" } }}
+                            className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20"
+                        />
+                        <motion.div
+                            animate={{ rotate: -360, scale: [1, 1.2, 1] }}
+                            transition={{ rotate: { duration: 15, repeat: Infinity, ease: "linear" }, scale: { duration: 3, repeat: Infinity, ease: "easeInOut" } }}
+                            className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20"
                         />
                     </div>
                 </motion.div>
             </div>
-        </section >
+        </section>
     )
 }
 
 export default HeroSection
-// lg:place-self-auto
