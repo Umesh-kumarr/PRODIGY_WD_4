@@ -107,33 +107,23 @@ const AboutSection = () => {
             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Me</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            Hi! I'm Umesh, a passionate full-stack developer who loves building interactive, user-focused web applications. I thrive 
-            on solving real-world problems with clean code and modern technologies. Always eager to learn, collaborate, and create digital 
-            experiences that make a difference.
+            Hi! I'm Umesh, a passionate full-stack developer who loves building interactive, user-focused web applications. I thrive on solving real-world problems with clean code and modern technologies, specializing in creating scalable, maintainable, and beautiful digital experiences. Driven by curiosity and a desire to make a positive impact through technology, I believe in continuous learning and enjoy collaborating in dynamic, team-oriented environments.
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500" />
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
+          <div className="flex justify-center lg:justify-start w-full">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-500
+              w-80 h-80 sm:w-80 sm:h-80 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[450px] xl:h-[450px]">
               <Image
                 src="/images/about.png"
-                width={500}
-                height={500}
                 alt="About Umesh"
-                className="w-full h-auto object-cover"
+                fill
+                className="object-cover"
                 priority
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 blur-xl" />
           </div>
           <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-            <h2 className="text-3xl font-bold text-white mb-4">Who am I?</h2>
-            <p className="text-base lg:text-lg mb-4">
-              I specialize in building scalable, maintainable, and beautiful web applications. My journey in tech is driven by curiosity and a
-               desire to make a positive impact through technology. I believe in continuous learning and enjoy working in collaborative 
-               environments.
-            </p>
             <div className="flex flex-row flex-wrap gap-2 mt-4">
               <TabButton
                 selectTab={() => handleTabChange("skills")}

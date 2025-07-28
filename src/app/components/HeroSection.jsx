@@ -26,7 +26,7 @@ const HeroSection = () => {
                     >
                         <span className="text-blue-400 font-medium text-lg">Welcome to my portfolio</span>
                     </motion.div>
-                    <h1 className="text-white mb-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                    <h1 className="text-white  mb-6 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
                             Hi, I'm{" "}
                         </span>
@@ -35,7 +35,7 @@ const HeroSection = () => {
                             sequence={[
                                 "Umesh",
                                 2000,
-                                "a Full Stack Developer",
+                                "a Fullstack Developer",
                                 2000,
                                 "a UI/UX Designer",
                                 2000,
@@ -44,7 +44,7 @@ const HeroSection = () => {
                             ]}
                             wrapper="span"
                             speed={50}
-                            className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500"
+                            className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mr-6"
                             repeat={Infinity}
                         />
                     </h1>
@@ -52,7 +52,7 @@ const HeroSection = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                        className="text-gray-300 text-lg sm:text-xl lg:text-2xl mb-8 max-w-2xl"
+                        className="text-gray-300 text-sm sm:text-lg lg:text-xl mb-8 max-w-xl"
                     >
                         I craft exceptional digital experiences with modern technologies. Passionate about creating innovative solutions that make a difference.
                     </motion.p>
