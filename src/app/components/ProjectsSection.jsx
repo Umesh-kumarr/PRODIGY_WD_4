@@ -30,8 +30,8 @@ const projectsData = [
     description: "A modern portfolio website built with Next.js and Tailwind CSS, showcasing my skills, projects, and achievements. Designed for responsiveness and smooth user experience. Features interactive sections and a clean, professional layout",
     image: "/images/projects/image2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Umesh-kumarr/PRODIGY_WD_4.git",
+    previewUrl: "https://prodigy-wd-4-hazel.vercel.app/",
   },
   // {
   //   id: 4,
