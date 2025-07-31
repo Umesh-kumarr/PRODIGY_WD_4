@@ -11,12 +11,12 @@ import Link from "next/link";
 const HeroSection = () => {
     return (
         <section className="min-h-[80vh] flex items-center justify-center">
-            <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className=" lg:col-span-8 place-self-auto text-center lg:text-left"
+                    className=" place-self-auto text-center lg:text-left"
                 >
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -64,13 +64,13 @@ const HeroSection = () => {
                     >
                         <Link
                             href="#contact"
-                            className="px-4 py-2 md:px-8 md:py-4 lg:px-8 lg:py-4 w-60 lg:w-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold text-base md:text-lg lg:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                            className="px-6 py-3 sm:px-8 sm:py-4 w-full sm:w-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold text-base xl:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                         >
                             Download CV
                         </Link>
                         <Link
                             href="#projects"
-                            className=" px-4 py-2 md:px-8 md:py-4 lg:px-8 lg:py-4 w-60 lg:w-auto rounded-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-semibold text-base md:text-lg lg:text-lg transition-all duration-300 transform hover:scale-105"
+                            className="px-6 py-3 sm:px-8 sm:py-4 w-full sm:w-auto rounded-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-semibold text-base xl:text-lg transition-all duration-300 transform hover:scale-105"
                         >
                             View My Work
                         </Link>
@@ -91,10 +91,10 @@ const HeroSection = () => {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
-                    className="row-start-1 lg:col-start-9  lg:col-span-4 place-self-auto"
+                    className="row-start-1 lg:col-start-2 place-self-center"
                 >
-                    <div className="relative md:w-fit md:pl-12">
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl" />
+                    <div className="relative  sm:w-96  md:w-fit md:pl-12">
+                        <div className="absolute  inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl" />
                         <div className="relative rounded-full bg-gradient-to-br from-gray-800 to-gray-900 p-2 shadow-2xl">
                             <div className="rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-4">
                                 <Image

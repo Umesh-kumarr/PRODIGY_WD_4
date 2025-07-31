@@ -106,14 +106,14 @@ const AboutSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Me</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-400 text-base lg:text-lg max-w-3xl mx-auto">
             Hi! I'm Umesh, a passionate full-stack developer who loves building interactive, user-focused web applications. I thrive on solving real-world problems with clean code and modern technologies, specializing in creating scalable, maintainable, and beautiful digital experiences. Driven by curiosity and a desire to make a positive impact through technology, I believe in continuous learning and enjoy collaborating in dynamic, team-oriented environments.
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center lg:justify-start w-full">
+          <div className="flex justify-center w-full">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-500
-              w-80 h-80 sm:w-80 sm:h-80 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[450px] xl:h-[450px]">
+              w-72 h-72  md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[450px] xl:h-[450px]">
               <Image
                 src="/images/about.png"
                 alt="About Umesh"
@@ -123,8 +123,8 @@ const AboutSection = () => {
               />
             </div>
           </div>
-          <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-            <div className="flex flex-row flex-wrap gap-2 mt-4">
+          <div className=" lg:pt-4 text-left flex flex-col h-full">
+            <div className="flex flex-row flex-wrap gap-2">
               <TabButton
                 selectTab={() => handleTabChange("skills")}
                 active={tab === "skills"}
