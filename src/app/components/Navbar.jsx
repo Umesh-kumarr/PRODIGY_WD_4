@@ -41,7 +41,7 @@ const Navbar = () => {
           >
             Umesh.dev
           </Link>
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <button
               onClick={() => setNavbarOpen((open) => !open)}
               className="flex items-center px-3 py-2 border border-gray-600 text-gray-300 hover:text-white hover:border-white rounded-lg transition-all duration-300 hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -51,7 +51,7 @@ const Navbar = () => {
               {navbarOpen ? <XMarkIcon className="h-5 w-5" /> : <Bars3Icon className="h-5 w-5" />}
             </button>
           </div>
-          <ul className="hidden lg:flex items-center space-x-8" role="menubar">
+          <ul className="hidden md:flex items-center space-x-8" role="menubar">
             {navLinks.map((link, index) => (
               <li key={index} role="none">
                 <Navlink href={link.path} title={link.title} />

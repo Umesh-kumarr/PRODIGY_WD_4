@@ -93,7 +93,7 @@ const HeroSection = () => {
                     transition={{ duration: 0.8, delay: 0.3 }}
                     className="row-start-1 lg:col-start-2 place-self-center"
                 >
-                    <div className="relative  sm:w-96  md:w-fit md:pl-12">
+                    <div className="relative w-60 sm:w-72  md:w-96 md:pl-12">
                         <div className="absolute  inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl" />
                         <div className="relative rounded-full bg-gradient-to-br from-gray-800 to-gray-900 p-2 shadow-2xl">
                             <div className="rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-4">
