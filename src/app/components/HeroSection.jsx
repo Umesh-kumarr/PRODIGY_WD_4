@@ -63,7 +63,7 @@ const HeroSection = () => {
                         className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start"
                     >
                         <Link
-                            href="#contact"
+                            href="Umesh RESUME.pdf"
                             className="px-6 py-3 sm:px-8 sm:py-4 w-full sm:w-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold text-base xl:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                         >
                             Download CV
